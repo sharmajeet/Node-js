@@ -22,12 +22,18 @@ $("input").keypress(function (e) {
 $("h1").on("mouseover",function(){
     $("body").css("background-color","lightgray");
 })
-
-$("h1").before("<button>New</button>");
+//adding button using before and after commands
+// $("h1").before("<button>New</button>");
 
 
 // animatation propertys
 $("button").on("click",function(){
     $("h1").animate({opacity:0.8});
     $("h1").animate({margin:"30px"});
+})
+
+$("#second").on("click",function(){
+    $("h1").animate({padding:"30px"});
+    $("h1").before("<h2 id='h2'>This is my documents .</h2>");
+    $("#h2").css("background-color","lightpink");
 })
